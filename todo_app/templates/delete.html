@@ -1,0 +1,22 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"/>
+</head>
+<div class="container">
+  <div class="alert alert-danger mt-4" role='alert'>
+    <h2 class="text-center">Delete The Item</h2>
+  </div>
+  <p>Are you sure that you wanna delete '{{item}}'?</p>
+
+  
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <a class = 'btn btn-warning' href="{% url 'list'%}">Cancel</a>
+    <button class="btn btn-danger" type="submit">Confirm</button>
+
+  </form>
+</div>
